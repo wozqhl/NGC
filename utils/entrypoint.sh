@@ -2,7 +2,7 @@
 set -e
 cat <<EOF
 ================
-    Wang Xuefang
+    ChangAn Perception
 ===============
 EOF
 # jupyter 访问密码，自行修改
