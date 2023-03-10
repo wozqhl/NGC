@@ -12,7 +12,10 @@ RUN apt-get -y install curl
 RUN apt-get -y install openssh-client
 RUN apt-get -y install openssh-server
 RUN apt-get -y install vim
-RUN apt-get -y install screen
+RUN apt-get -y install screen \
+    && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 curl openssh-client openssh-server vim\
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # set root login
 RUN echo "root:passwd123" | chpasswd
